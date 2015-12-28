@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P7c-yn-8Li">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Wikitrends-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,116 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="96V-52-IpJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="eah-rv-P4w"/>
+                                    <constraint firstAttribute="height" constant="487" id="pJW-O1-xC3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eah-rv-P4w"/>
+                                        <exclude reference="pJW-O1-xC3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HSQ-zT-2rZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9cM-Dp-733"/>
+                                </connections>
+                            </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-AJ-zI4">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Uptrends" id="ShX-0Y-hQr"/>
+                                    <tabBarItem title="Downtrends" id="YU8-fB-uri">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="13" vertical="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Most visited" id="h6P-si-BLV"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1vz-F7-Oxo"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="96V-52-IpJ" secondAttribute="leading" id="2q7-Jk-Vw4"/>
+                            <constraint firstAttribute="trailing" secondItem="tGX-AJ-zI4" secondAttribute="trailing" id="4lA-Yd-MBu"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="6Di-d1-8d4"/>
+                            <constraint firstItem="96V-52-IpJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6og-QS-KEs"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7ex-Ec-9Hk"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9XD-Wo-7WH"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="96V-52-IpJ" secondAttribute="leading" id="HrC-LB-FE3"/>
+                            <constraint firstItem="96V-52-IpJ" firstAttribute="bottom" secondItem="tGX-AJ-zI4" secondAttribute="top" id="M1a-Nm-izf"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="top" secondItem="96V-52-IpJ" secondAttribute="bottom" id="Nj7-wl-lcl"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="trailing" secondItem="96V-52-IpJ" secondAttribute="trailing" id="QyV-QV-fo6"/>
+                            <constraint firstItem="96V-52-IpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RQe-Bg-0sF"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="trailing" secondItem="96V-52-IpJ" secondAttribute="trailing" id="TbN-49-YZp"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="top" secondItem="96V-52-IpJ" secondAttribute="bottom" id="X8I-Mt-JDn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tGX-AJ-zI4" secondAttribute="bottom" constant="8" id="YGI-jS-zLU"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YMi-tC-wTL"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="leading" secondItem="96V-52-IpJ" secondAttribute="leading" id="ZoD-I9-nPK"/>
+                            <constraint firstItem="96V-52-IpJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="dZK-zg-tqX"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="trailing" secondItem="96V-52-IpJ" secondAttribute="trailing" id="dmt-Qn-FTw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tGX-AJ-zI4" secondAttribute="trailing" constant="-26" id="nfb-qT-RFg"/>
+                            <constraint firstAttribute="trailing" secondItem="96V-52-IpJ" secondAttribute="trailing" id="rEN-ct-pia"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="top" secondItem="96V-52-IpJ" secondAttribute="bottom" id="vAc-To-wh4"/>
+                            <constraint firstAttribute="trailing" secondItem="tGX-AJ-zI4" secondAttribute="trailing" id="whZ-R9-FWE"/>
+                            <constraint firstItem="tGX-AJ-zI4" firstAttribute="top" secondItem="96V-52-IpJ" secondAttribute="bottom" id="zdl-42-i0D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6og-QS-KEs"/>
+                                <exclude reference="M1a-Nm-izf"/>
+                                <exclude reference="RQe-Bg-0sF"/>
+                                <exclude reference="rEN-ct-pia"/>
+                                <exclude reference="2q7-Jk-Vw4"/>
+                                <exclude reference="6Di-d1-8d4"/>
+                                <exclude reference="Nj7-wl-lcl"/>
+                                <exclude reference="QyV-QV-fo6"/>
+                                <exclude reference="TbN-49-YZp"/>
+                                <exclude reference="X8I-Mt-JDn"/>
+                                <exclude reference="YMi-tC-wTL"/>
+                                <exclude reference="ZoD-I9-nPK"/>
+                                <exclude reference="nfb-qT-RFg"/>
+                                <exclude reference="vAc-To-wh4"/>
+                                <exclude reference="whZ-R9-FWE"/>
+                                <exclude reference="YGI-jS-zLU"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Wikitrends" id="cOm-2W-bYv"/>
+                    <connections>
+                        <outlet property="downTrends" destination="YU8-fB-uri" id="fdM-Xa-GuX"/>
+                        <outlet property="mostView" destination="h6P-si-BLV" id="KMN-QJ-HP3"/>
+                        <outlet property="tableView" destination="96V-52-IpJ" id="kYS-B1-hFL"/>
+                        <outlet property="upTrends" destination="ShX-0Y-hQr" id="6K1-Dg-lIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1152" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5SZ-rD-sbJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCk-eb-syy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P7c-yn-8Li" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQG-PX-4Ku">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Qa-sO-6mE"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
         </scene>
     </scenes>
 </document>

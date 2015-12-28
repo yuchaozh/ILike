@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITabBarItem *upTrends;
+@property (strong, nonatomic) IBOutlet UITabBarItem *downTrends;
+@property (strong, nonatomic) IBOutlet UITabBarItem *mostView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
