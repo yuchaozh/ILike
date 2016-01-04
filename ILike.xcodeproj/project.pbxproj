@@ -15,6 +15,7 @@
 		C98BFAFA1C31D61600B2D2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98BFAF81C31D61600B2D2AB /* LaunchScreen.storyboard */; };
 		C98BFB051C31D61600B2D2AB /* ILikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BFB041C31D61600B2D2AB /* ILikeTests.m */; };
 		C98BFB101C31D61600B2D2AB /* ILikeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BFB0F1C31D61600B2D2AB /* ILikeUITests.m */; };
+		C98BFB1F1C31F62B00B2D2AB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BFB1E1C31F62B00B2D2AB /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C98BFB0B1C31D61600B2D2AB /* ILikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ILikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98BFB0F1C31D61600B2D2AB /* ILikeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ILikeUITests.m; sourceTree = "<group>"; };
 		C98BFB111C31D61600B2D2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98BFB1D1C31F62B00B2D2AB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C98BFB1E1C31F62B00B2D2AB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				C98BFAF01C31D61600B2D2AB /* ViewController.h */,
 				C98BFAF11C31D61600B2D2AB /* ViewController.m */,
 				C98BFAF31C31D61600B2D2AB /* Main.storyboard */,
+				C98BFB1D1C31F62B00B2D2AB /* WebViewController.h */,
+				C98BFB1E1C31F62B00B2D2AB /* WebViewController.m */,
 				C98BFAF61C31D61600B2D2AB /* Assets.xcassets */,
 				C98BFAF81C31D61600B2D2AB /* LaunchScreen.storyboard */,
 				C98BFAFB1C31D61600B2D2AB /* Info.plist */,
@@ -273,6 +278,7 @@
 				C98BFAF21C31D61600B2D2AB /* ViewController.m in Sources */,
 				C98BFAEF1C31D61600B2D2AB /* AppDelegate.m in Sources */,
 				C98BFAEC1C31D61600B2D2AB /* main.m in Sources */,
+				C98BFB1F1C31F62B00B2D2AB /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

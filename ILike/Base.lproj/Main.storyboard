@@ -25,6 +25,20 @@
                                     <constraint firstAttribute="width" constant="600" id="eah-rv-P4w"/>
                                     <constraint firstAttribute="height" constant="487" id="pJW-O1-xC3"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SimpleTableItem" id="SvE-bY-wPN">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SimpleTableItem" tableViewCell="SvE-bY-wPN" id="n8j-0O-4pY">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bc3-dG-G0d" kind="push" id="Gu4-bU-Ncj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="eah-rv-P4w"/>
@@ -110,10 +124,51 @@
             </objects>
             <point key="canvasLocation" x="1152" y="429"/>
         </scene>
+        <!--Wikitrends-->
+        <scene sceneID="qBi-2t-e8E">
+            <objects>
+                <viewController id="bc3-dG-G0d" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SiT-wy-urf"/>
+                        <viewControllerLayoutGuide type="bottom" id="LJ3-3n-jTW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gIN-Re-oFY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24n-zj-y3y">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="mQL-30-KGJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mQL-30-KGJ"/>
+                                    </mask>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="24n-zj-y3y" secondAttribute="trailing" id="DWK-0Q-dcz"/>
+                            <constraint firstItem="24n-zj-y3y" firstAttribute="bottom" secondItem="LJ3-3n-jTW" secondAttribute="top" id="NTg-cJ-H05"/>
+                            <constraint firstItem="24n-zj-y3y" firstAttribute="leading" secondItem="gIN-Re-oFY" secondAttribute="leading" id="ZwE-Ue-rw7"/>
+                            <constraint firstItem="24n-zj-y3y" firstAttribute="top" secondItem="gIN-Re-oFY" secondAttribute="top" id="v3d-jY-3qe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wikitrends" id="KUf-vb-9rJ"/>
+                    <connections>
+                        <outlet property="webView" destination="24n-zj-y3y" id="58C-9M-Ic1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXe-US-xOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="-221"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5SZ-rD-sbJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GCk-eb-syy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P7c-yn-8Li" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQG-PX-4Ku">
@@ -125,8 +180,31 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Qa-sO-6mE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCk-eb-syy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="429"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1YQ-tm-k0P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tco-rh-fo8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ktS-zv-00N"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGK-n5-hTj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bc3-dG-G0d" kind="relationship" relationship="rootViewController" id="D9S-YU-6YP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqT-zQ-GQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="441"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gu4-bU-Ncj"/>
+    </inferredMetricsTieBreakers>
 </document>
